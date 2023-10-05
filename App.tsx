@@ -9,15 +9,28 @@ import MemoEditScreen from "./src/screens/MemoEditScreen";
 import MemoCreateScreen from "./src/screens/MemoCreateScreen";
 import LoginScreen from "./src/screens/LoginScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
-import AppBar from "./src/components/AppBar";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={MemoListScreen} />
+      <Stack.Navigator
+        initialRouteName="SignUp"
+        screenOptions={{
+          headerStyle: { backgroundColor: "#467FD3" },
+          headerTitleStyle: { color: "#ffffff" },
+          headerTitle: "Memo App",
+          headerTintColor: "#ffffff",
+          headerBackTitle: "Back",
+        }}
+      >
+        <Stack.Screen name="MemoList" component={MemoListScreen} />
+        <Stack.Screen name="MemoDetail" component={MemoDetailScreen} />
+        <Stack.Screen name="MemoEdit" component={MemoEditScreen} />
+        <Stack.Screen name="MemoCreate" component={MemoCreateScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
