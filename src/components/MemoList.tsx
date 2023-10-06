@@ -26,26 +26,6 @@ export default function MemoList() {
         >
           <Feather name="x" size={24} color="#B0B0B0" />
         </TouchableOpacity>
-
-        <View>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2020年12月24日</Text>
-          </View>
-          <TouchableOpacity>
-            <Feather name="x" size={24} color="#B0B0B0" />
-          </TouchableOpacity>
-        </View>
-
-        <View>
-          <View>
-            <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-            <Text style={styles.memoListItemDate}>2020年12月24日</Text>
-          </View>
-          <View>
-            <Feather name="x" size={16} color="#B0B0B0" />
-          </View>
-        </View>
       </TouchableOpacity>
     </View>
   );
@@ -70,5 +50,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     color: "#848484",
+  },
+  memoDelete: {
+    padding: 8,
   },
 });
